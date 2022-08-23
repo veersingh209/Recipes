@@ -13,6 +13,8 @@
 		4897A97A28B54F1C0029C134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4897A97928B54F1C0029C134 /* Preview Assets.xcassets */; };
 		4897A98628B5501A0029C134 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4897A98528B5501A0029C134 /* recipes.json */; };
 		4897A98828B5504B0029C134 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A98728B5504B0029C134 /* Recipe.swift */; };
+		4897A98A28B5513C0029C134 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A98928B5513C0029C134 /* RecipeModel.swift */; };
+		4897A98C28B551990029C134 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A98B28B551990029C134 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4897A97928B54F1C0029C134 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4897A98528B5501A0029C134 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 		4897A98728B5504B0029C134 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		4897A98928B5513C0029C134 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		4897A98B28B551990029C134 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		4897A98128B54F490029C134 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4897A98928B5513C0029C134 /* RecipeModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 		4897A98328B54F5D0029C134 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4897A98B28B551990029C134 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -185,8 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4897A98828B5504B0029C134 /* Recipe.swift in Sources */,
+				4897A98A28B5513C0029C134 /* RecipeModel.swift in Sources */,
 				4897A97528B54F1A0029C134 /* RecipesListView.swift in Sources */,
 				4897A97328B54F1A0029C134 /* RecipesApp.swift in Sources */,
+				4897A98C28B551990029C134 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

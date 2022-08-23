@@ -9,6 +9,7 @@ import Foundation
 
 class Recipe: Identifiable, Codable {
     
+    var id:UUID?
     var name: String
     var featured: Bool
     var image: String
