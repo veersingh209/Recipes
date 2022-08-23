@@ -11,6 +11,7 @@
 		4897A97528B54F1A0029C134 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A97428B54F1A0029C134 /* RecipesListView.swift */; };
 		4897A97728B54F1C0029C134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4897A97628B54F1C0029C134 /* Assets.xcassets */; };
 		4897A97A28B54F1C0029C134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4897A97928B54F1C0029C134 /* Preview Assets.xcassets */; };
+		4897A98628B5501A0029C134 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4897A98528B5501A0029C134 /* recipes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4897A97428B54F1A0029C134 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		4897A97628B54F1C0029C134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4897A97928B54F1C0029C134 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4897A98528B5501A0029C134 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		4897A98428B54FCC0029C134 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4897A98528B5501A0029C134 /* recipes.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4897A97A28B54F1C0029C134 /* Preview Assets.xcassets in Resources */,
+				4897A98628B5501A0029C134 /* recipes.json in Resources */,
 				4897A97728B54F1C0029C134 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
