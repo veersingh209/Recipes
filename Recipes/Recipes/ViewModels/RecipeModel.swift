@@ -12,7 +12,7 @@ class RecipeModel: ObservableObject {
     var recipe = [Recipe]()
     
     init() {
-        
+        recipe = DataService.getRecipeData()
     }
     
 }
