@@ -17,7 +17,8 @@ class Recipe: Identifiable, Codable {
     var prepTime: String
     var totalTime: String
     var servings: Int
-    var ingredients: [String]
+    var highlights: [String]
+    var ingredients: [Ingredients]
     var directions: [String]
     
 }
