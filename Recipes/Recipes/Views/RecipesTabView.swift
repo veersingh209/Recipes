@@ -33,6 +33,7 @@ struct RecipesTabView: View {
                 .tag(1)
             
         }
+        .environmentObject(RecipeModel())
         
     }
 }
