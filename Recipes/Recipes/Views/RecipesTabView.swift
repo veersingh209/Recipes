@@ -14,7 +14,7 @@ struct RecipesTabView: View {
         
         TabView(selection: $tabItemSelection) {
             
-            Text("Main Tab View")
+            RecipeFeatureView()
                 .tabItem {
                     VStack {
                         Image(systemName: "star.fill")
