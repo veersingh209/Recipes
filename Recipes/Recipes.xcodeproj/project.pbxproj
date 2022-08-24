@@ -16,6 +16,7 @@
 		4897A98A28B5513C0029C134 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A98928B5513C0029C134 /* RecipeModel.swift */; };
 		4897A98C28B551990029C134 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A98B28B551990029C134 /* DataService.swift */; };
 		4897A99028B55EC40029C134 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A98F28B55EC40029C134 /* RecipeDetailView.swift */; };
+		4897A9BF28B6AA0B0029C134 /* RecipesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A9BE28B6AA0B0029C134 /* RecipesTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4897A98928B5513C0029C134 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		4897A98B28B551990029C134 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4897A98F28B55EC40029C134 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		4897A9BE28B6AA0B0029C134 /* RecipesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		4897A98228B54F4F0029C134 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4897A9BE28B6AA0B0029C134 /* RecipesTabView.swift */,
 				4897A97428B54F1A0029C134 /* RecipesListView.swift */,
 				4897A98F28B55EC40029C134 /* RecipeDetailView.swift */,
 			);
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4897A9BF28B6AA0B0029C134 /* RecipesTabView.swift in Sources */,
 				4897A98828B5504B0029C134 /* Recipe.swift in Sources */,
 				4897A99028B55EC40029C134 /* RecipeDetailView.swift in Sources */,
 				4897A98A28B5513C0029C134 /* RecipeModel.swift in Sources */,
