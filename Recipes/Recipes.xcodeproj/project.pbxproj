@@ -20,6 +20,7 @@
 		4897A9C128B6B27C0029C134 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A9C028B6B27C0029C134 /* Ingredients.swift */; };
 		4897A9C328B6CB760029C134 /* RecipeFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A9C228B6CB760029C134 /* RecipeFeatureView.swift */; };
 		4897A9C628B7ED9B0029C134 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A9C528B7ED9B0029C134 /* Rational.swift */; };
+		4897A9CA28B7F94A0029C134 /* RecipeFeatureView-Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4897A9C928B7F94A0029C134 /* RecipeFeatureView-Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4897A9C028B6B27C0029C134 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		4897A9C228B6CB760029C134 /* RecipeFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeatureView.swift; sourceTree = "<group>"; };
 		4897A9C528B7ED9B0029C134 /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
+		4897A9C928B7F94A0029C134 /* RecipeFeatureView-Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeFeatureView-Text.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				4897A9C228B6CB760029C134 /* RecipeFeatureView.swift */,
 				4897A97428B54F1A0029C134 /* RecipesListView.swift */,
 				4897A98F28B55EC40029C134 /* RecipeDetailView.swift */,
+				4897A9C928B7F94A0029C134 /* RecipeFeatureView-Text.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				4897A9BF28B6AA0B0029C134 /* RecipesTabView.swift in Sources */,
 				4897A98828B5504B0029C134 /* Recipe.swift in Sources */,
 				4897A99028B55EC40029C134 /* RecipeDetailView.swift in Sources */,
+				4897A9CA28B7F94A0029C134 /* RecipeFeatureView-Text.swift in Sources */,
 				4897A98A28B5513C0029C134 /* RecipeModel.swift in Sources */,
 				4897A97528B54F1A0029C134 /* RecipesListView.swift in Sources */,
 				4897A9C628B7ED9B0029C134 /* Rational.swift in Sources */,

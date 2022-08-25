@@ -10,15 +10,16 @@ import SwiftUI
 struct RecipeFeatureView: View {
     @EnvironmentObject var model: RecipeModel
     @State var showSelectedRecipe = false
+    @State var featuredIndex = 0
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0.0) {
-            title
+            featuredTitle
             
             GeometryReader { geo in
                 
-                TabView {
+                TabView(selection: $featuredIndex) {
                     
                     ForEach(0..<model.recipe.count) { index in
                         if model.recipe[index].featured {
@@ -51,13 +52,12 @@ struct RecipeFeatureView: View {
                                     )
                                     .cornerRadius(15)
                                 }
+                                .tag(featuredIndex)
                                 .buttonStyle(PlainButtonStyle())
                                 .sheet(isPresented: $showSelectedRecipe) {
                                     RecipeDetailView(recipe: model.recipe[index])
                                 }
                             }
-                            
-                            
                             
                         }
                         
@@ -74,16 +74,20 @@ struct RecipeFeatureView: View {
                 )
             }
             
-            recipeDescription
+            RecipeFeatureView_Text(featuredIndex: featuredIndex, highlights: model.recipe[featuredIndex].highlights)
             
+        }
+        .onAppear {
+            setFeaturedIndex()
         }
         
     }
+    
 }
 
 extension RecipeFeatureView {
     
-    var title: some View {
+    var featuredTitle: some View {
         Text("Featured Recipes")
             .font(.largeTitle)
             .fontWeight(.bold)
@@ -91,19 +95,11 @@ extension RecipeFeatureView {
             .padding([.top, .leading, .trailing])
     }
     
-    var recipeDescription: some View {
-        VStack(alignment: .leading, spacing: 3.0) {
-            Text("Preparation Time: ")
-                .font(.headline)
-                .fontWeight(.bold)
-            Text("1 Hour")
-            
-            Text("Highlights: ")
-                .font(.headline)
-                .fontWeight(.bold)
-            Text("Healthy, Yummy")
+    func setFeaturedIndex() {
+        var index = model.recipe.firstIndex { (recipe) -> Bool in
+            return recipe.featured
         }
-        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        featuredIndex = index ?? 0
     }
 }
 
