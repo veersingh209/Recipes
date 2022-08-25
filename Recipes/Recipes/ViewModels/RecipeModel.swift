@@ -15,4 +15,13 @@ class RecipeModel: ObservableObject {
         recipe = DataService.getRecipeData()
     }
     
+    static func getPortionSize(
+        ingredient: Ingredients,
+        selectedSize: Int,
+        recipeServing: Int
+    ) -> String {
+        
+        return(String(selectedSize))
+    }
+    
 }

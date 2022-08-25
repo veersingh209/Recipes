@@ -10,6 +10,8 @@ import SwiftUI
 struct RecipeDetailView: View {
     var recipe: Recipe
     
+    @State var selectedPortionSize = 1
+    
     var body: some View {
         
         ScrollView {
@@ -23,12 +25,28 @@ struct RecipeDetailView: View {
                     .clipped()
                 }
                 
+                VStack(alignment: .leading, spacing: 1.0) {
+                
+                    Picker("", selection: $selectedPortionSize) {
+                        Text("1").tag(1)
+                        Text("2").tag(2)
+                        Text("3").tag(3)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .frame(width: 160)
+                    
+                    Text("Select a portion size")
+                        .font(.caption2)
+                        .padding(.bottom, 10)
+                }
+                .padding(.leading)
+                
                 VStack(alignment: .leading) {
                     Text("Ingredients")
                         .font(.headline)
                         .padding(.bottom, 5)
                     ForEach(recipe.ingredients) { ingredient in
-                        Text("- \(ingredient.name)")
+                        Text("- \(RecipeModel.getPortionSize(ingredient: ingredient, selectedSize: selectedPortionSize, recipeServing: recipe.servings)) \(ingredient.name)")
                             .font(.caption)
                             .padding(.bottom, 0.5)
                     }
