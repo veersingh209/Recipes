@@ -21,7 +21,7 @@ struct RecipesTabView: View {
                         Text("Featured")
                     }
                 }
-                .tag(0)
+                .tag(1)
             
             RecipesListView()
                 .tabItem {
@@ -30,7 +30,7 @@ struct RecipesTabView: View {
                         Text("List")
                     }
                 }
-                .tag(1)
+                .tag(2)
             
         }
         .environmentObject(RecipeModel())

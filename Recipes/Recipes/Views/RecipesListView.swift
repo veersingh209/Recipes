@@ -42,8 +42,8 @@ struct RecipesListView: View {
                                     VStack(alignment: .leading) {
                                         Text(r.name)
                                             .font(.title2)
-                                        Text(r.description)
-                                            .font(.caption)
+                                            .fontWeight(.medium)
+                                        RecipeHiglightsText(highlights: r.highlights)
                                     }
                                 }
                             }

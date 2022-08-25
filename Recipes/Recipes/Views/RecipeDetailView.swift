@@ -30,8 +30,26 @@ struct RecipeDetailView: View {
                     Text(recipe.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                        .padding(.trailing)
+                    
+                    Text(recipe.description)
+                        .font(.caption)
+                        .padding([.bottom, .trailing])
+                    
+                    HStack {
+                        Text("Prep Time:")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                        Text(recipe.prepTime)
+                            .font(.caption)
+                        
+                        Text("Total Time:")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                        Text(recipe.totalTime)
+                            .font(.caption)
+                    }
+                    .padding(.bottom)
+
                 
                     Picker("", selection: $selectedPortionSize) {
                         Text("2").tag(2)
@@ -47,6 +65,8 @@ struct RecipeDetailView: View {
                         .padding(.bottom, 10)
                 }
                 .padding(.leading)
+                
+                Divider()
                 
                 VStack(alignment: .leading) {
                     Text("Ingredients")

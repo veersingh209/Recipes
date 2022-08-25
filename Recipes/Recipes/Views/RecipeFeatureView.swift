@@ -74,7 +74,7 @@ struct RecipeFeatureView: View {
                 )
             }
             
-            RecipeFeatureView_Text(featuredIndex: featuredIndex, highlights: model.recipe[featuredIndex].highlights)
+            featuredShortDescription
             
         }
         .onAppear {
@@ -93,6 +93,23 @@ extension RecipeFeatureView {
             .fontWeight(.bold)
             .multilineTextAlignment(.leading)
             .padding([.top, .leading, .trailing])
+    }
+    
+    var featuredShortDescription: some View {
+            VStack(alignment: .leading, spacing: 3.0) {
+                
+                Text("Preparation Time: ")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(model.recipe[featuredIndex].prepTime)
+                
+                Text("Highlights: ")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                RecipeHiglightsText(highlights: model.recipe[featuredIndex].highlights)
+                
+            }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     func setFeaturedIndex() {
