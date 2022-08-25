@@ -26,6 +26,12 @@ struct RecipeDetailView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 1.0) {
+                    
+                    Text(recipe.name)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .padding(.trailing)
                 
                     Picker("", selection: $selectedPortionSize) {
                         Text("2").tag(2)
@@ -74,7 +80,7 @@ struct RecipeDetailView: View {
                 }
                 .padding(.horizontal, 20)
             }
-            .navigationBarTitle(recipe.name)
+            .navigationBarHidden(true)
         }
         
     }

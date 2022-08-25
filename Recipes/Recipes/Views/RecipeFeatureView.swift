@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeFeatureView: View {
     @EnvironmentObject var model: RecipeModel
+    @State var showSelectedRecipe = false
     
     var body: some View {
         
@@ -22,29 +23,41 @@ struct RecipeFeatureView: View {
                     ForEach(0..<model.recipe.count) { index in
                         if model.recipe[index].featured {
                             
-                            ZStack {
+                            VStack {
                                 
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                
-                                VStack(spacing: 0) {
-                                    Image(model.recipe[index].image)
-                                        .resizable()
-                                        .scaledToFill()
-                                        .clipped()
-                                    
-                                    Text(model.recipe[index].name)
-                                        .font(.title3)
-                                        .padding(5)
+                                Button {
+                                    showSelectedRecipe = true
+                                } label: {
+                                    ZStack {
+                                        Rectangle()
+                                            .foregroundColor(.white)
+                                        
+                                        VStack(spacing: 0) {
+                                            Image(model.recipe[index].image)
+                                                .resizable()
+                                                .scaledToFill()
+                                                .clipped()
+                                            
+                                            Text(model.recipe[index].name)
+                                                .font(.title3)
+                                                .padding(5)
+                                        }
+                                        
+                                    }
+                                    .frame(
+                                        width: geo.size.width - 40,
+                                        height: geo.size.height - 100,
+                                        alignment: .center
+                                    )
+                                    .cornerRadius(15)
                                 }
-                                
+                                .buttonStyle(PlainButtonStyle())
+                                .sheet(isPresented: $showSelectedRecipe) {
+                                    RecipeDetailView(recipe: model.recipe[index])
+                                }
                             }
-                            .frame(
-                                width: geo.size.width - 40,
-                                height: geo.size.height - 100,
-                                alignment: .center
-                            )
-                            .cornerRadius(15)
+                            
+                            
                             
                         }
                         
@@ -71,11 +84,11 @@ struct RecipeFeatureView: View {
 extension RecipeFeatureView {
     
     var title: some View {
-    Text("Featured Recipes")
-        .font(.largeTitle)
-        .fontWeight(.bold)
-        .multilineTextAlignment(.leading)
-        .padding([.top, .leading, .trailing])
+        Text("Featured Recipes")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.leading)
+            .padding([.top, .leading, .trailing])
     }
     
     var recipeDescription: some View {
