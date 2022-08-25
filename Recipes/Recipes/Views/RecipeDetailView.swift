@@ -10,7 +10,7 @@ import SwiftUI
 struct RecipeDetailView: View {
     var recipe: Recipe
     
-    @State var selectedPortionSize = 1
+    @State var selectedPortionSize = 2
     
     var body: some View {
         
@@ -28,9 +28,10 @@ struct RecipeDetailView: View {
                 VStack(alignment: .leading, spacing: 1.0) {
                 
                     Picker("", selection: $selectedPortionSize) {
-                        Text("1").tag(1)
                         Text("2").tag(2)
-                        Text("3").tag(3)
+                        Text("4").tag(4)
+                        Text("6").tag(6)
+                        Text("8").tag(8)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .frame(width: 160)
@@ -46,7 +47,7 @@ struct RecipeDetailView: View {
                         .font(.headline)
                         .padding(.bottom, 5)
                     ForEach(recipe.ingredients) { ingredient in
-                        Text("- \(RecipeModel.getPortionSize(ingredient: ingredient, selectedSize: selectedPortionSize, recipeServing: recipe.servings)) \(ingredient.name)")
+                        Text("- \(RecipeModel.getPortion(ingredient: ingredient, recipeServings: recipe.servings, targetServings: selectedPortionSize)) \(ingredient.name)")
                             .font(.caption)
                             .padding(.bottom, 0.5)
                     }
