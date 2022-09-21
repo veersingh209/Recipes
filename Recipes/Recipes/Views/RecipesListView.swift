@@ -43,6 +43,7 @@ struct RecipesListView: View {
                                         Text(r.name)
                                             .font(.title2)
                                             .fontWeight(.medium)
+                                            .foregroundColor(Color("AdaptiveText"))
                                         RecipeHiglightsText(highlights: r.highlights)
                                     }
                                 }

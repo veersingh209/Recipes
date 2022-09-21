@@ -41,6 +41,7 @@ struct RecipeFeatureView: View {
                                             
                                             Text(model.recipe[index].name)
                                                 .font(.title3)
+                                                .foregroundColor(Color("AdaptiveBackground"))
                                                 .padding(5)
                                         }
                                         
